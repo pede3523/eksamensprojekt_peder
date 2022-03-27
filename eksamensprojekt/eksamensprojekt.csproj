@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Geomatri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Geomatri.Designer.cs">
+      <DependentUpon>Form_Geomatri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Geomatri_task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Geomatri_task.Designer.cs">
+      <DependentUpon>Form_Geomatri_task.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Vector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Geomatri.resx">
+      <DependentUpon>Form_Geomatri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Geomatri_task.resx">
+      <DependentUpon>Form_Geomatri_task.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Vector.resx">
       <DependentUpon>Form_Vector.cs</DependentUpon>

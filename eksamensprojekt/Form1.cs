@@ -17,11 +17,11 @@ namespace eksamensprojekt
             InitializeComponent();
         }
 
-        private void button_Vec_Click(object sender, EventArgs e) //når man trykker på knappen åbner et nyt vindu 
+        private void button_Vec_Click(object sender, EventArgs e) //når man trykker på knappen åbner et nyt vindue 
         {
-            Form_Vector fv = new Form_Vector(); //kalder nyt vindu frem 
+            Form_Vector fv = new Form_Vector(); //kalder nyt vindue frem 
             this.Visible = false;
-            fv.Show(); //viser vindu 
+            fv.Show(); //viser vindue 
             
             
         }
@@ -29,6 +29,13 @@ namespace eksamensprojekt
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button_Geo_Click(object sender, EventArgs e)
+        {
+            Form_Geomatri fg = new Form_Geomatri();
+            this.Visible = false;
+            fg.Show();
         }
     }
 }

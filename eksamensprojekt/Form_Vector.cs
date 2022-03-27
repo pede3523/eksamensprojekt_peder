@@ -20,8 +20,9 @@ namespace eksamensprojekt
         private void button_Continue_Click(object sender, EventArgs e)
         {
             Form_Vector_Task fvt = new Form_Vector_Task();
-            this.Visible = true;
+            this.Visible = false;
             fvt.Show();
+            this.Close();
             //this.Close(); //kan lukke denne men ikke den første da det er hoved formen 
         }
 

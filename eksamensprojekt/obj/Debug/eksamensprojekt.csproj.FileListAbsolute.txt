@@ -10,3 +10,17 @@ C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamenspr
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.pdb
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Vector.resources
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Vector_Task.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\bin\Debug\eksamensprojekt.exe.config
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\bin\Debug\eksamensprojekt.exe
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\bin\Debug\eksamensprojekt.pdb
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.csproj.AssemblyReference.cache
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form1.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Vector.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Vector_Task.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Properties.Resources.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.csproj.GenerateResource.cache
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.csproj.CoreCompileInputs.cache
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.exe
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.pdb
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Geomatri.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Geomatri_task.resources
