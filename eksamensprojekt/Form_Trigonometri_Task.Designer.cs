@@ -43,6 +43,10 @@ namespace eksamensprojekt
             this.button_answer2 = new System.Windows.Forms.Button();
             this.label_answer2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label_tal3 = new System.Windows.Forms.Label();
+            this.button_answer3 = new System.Windows.Forms.Button();
+            this.textBox_answer3 = new System.Windows.Forms.TextBox();
+            this.label_answer3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -179,11 +183,50 @@ namespace eksamensprojekt
             this.label4.TabIndex = 14;
             this.label4.Text = "Cos task";
             // 
+            // label_tal3
+            // 
+            this.label_tal3.AutoSize = true;
+            this.label_tal3.Location = new System.Drawing.Point(23, 234);
+            this.label_tal3.Name = "label_tal3";
+            this.label_tal3.Size = new System.Drawing.Size(51, 20);
+            this.label_tal3.TabIndex = 15;
+            this.label_tal3.Text = "label5";
+            // 
+            // button_answer3
+            // 
+            this.button_answer3.Location = new System.Drawing.Point(367, 227);
+            this.button_answer3.Name = "button_answer3";
+            this.button_answer3.Size = new System.Drawing.Size(75, 27);
+            this.button_answer3.TabIndex = 16;
+            this.button_answer3.Text = "Answer";
+            this.button_answer3.UseVisualStyleBackColor = true;
+            this.button_answer3.Click += new System.EventHandler(this.button_answer3_Click);
+            // 
+            // textBox_answer3
+            // 
+            this.textBox_answer3.Location = new System.Drawing.Point(261, 227);
+            this.textBox_answer3.Name = "textBox_answer3";
+            this.textBox_answer3.Size = new System.Drawing.Size(100, 26);
+            this.textBox_answer3.TabIndex = 17;
+            // 
+            // label_answer3
+            // 
+            this.label_answer3.AutoSize = true;
+            this.label_answer3.Location = new System.Drawing.Point(448, 230);
+            this.label_answer3.Name = "label_answer3";
+            this.label_answer3.Size = new System.Drawing.Size(51, 20);
+            this.label_answer3.TabIndex = 18;
+            this.label_answer3.Text = "label6";
+            // 
             // Form_Trigonometri_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_answer3);
+            this.Controls.Add(this.textBox_answer3);
+            this.Controls.Add(this.button_answer3);
+            this.Controls.Add(this.label_tal3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_answer2);
             this.Controls.Add(this.button_answer2);
@@ -222,5 +265,9 @@ namespace eksamensprojekt
         private System.Windows.Forms.Button button_answer2;
         private System.Windows.Forms.Label label_answer2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_tal3;
+        private System.Windows.Forms.Button button_answer3;
+        private System.Windows.Forms.TextBox textBox_answer3;
+        private System.Windows.Forms.Label label_answer3;
     }
 }
