@@ -92,6 +92,7 @@ namespace eksamensprojekt
             this.button_Tri.TabIndex = 4;
             this.button_Tri.Text = "Trigonometri";
             this.button_Tri.UseVisualStyleBackColor = true;
+            this.button_Tri.Click += new System.EventHandler(this.button_Tri_Click);
             // 
             // button_Close
             // 

@@ -24,3 +24,5 @@ C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.pdb
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Geomatri.resources
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Geomatri_task.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Trigonometri.resources
+C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Trigonometri_Task.resources

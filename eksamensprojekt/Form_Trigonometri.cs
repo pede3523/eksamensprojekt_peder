@@ -16,5 +16,19 @@ namespace eksamensprojekt
         {
             InitializeComponent();
         }
+
+        private void button_continue_Click(object sender, EventArgs e)
+        {
+            Form_Trigonometri_Task ftt = new Form_Trigonometri_Task();
+            ftt.Show();
+            this.Close();
+        }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Close();
+        }
     }
 }

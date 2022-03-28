@@ -37,5 +37,12 @@ namespace eksamensprojekt
             this.Visible = false;
             fg.Show();
         }
+
+        private void button_Tri_Click(object sender, EventArgs e)
+        {
+            Form_Trigonometri ft = new Form_Trigonometri();
+            this.Visible = false;
+            ft.Show();
+        }
     }
 }

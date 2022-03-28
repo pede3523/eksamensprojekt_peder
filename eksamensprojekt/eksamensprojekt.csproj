@@ -64,6 +64,18 @@
     <Compile Include="Form_Geomatri_task.Designer.cs">
       <DependentUpon>Form_Geomatri_task.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Trigonometri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Trigonometri.Designer.cs">
+      <DependentUpon>Form_Trigonometri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Trigonometri_Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Trigonometri_Task.Designer.cs">
+      <DependentUpon>Form_Trigonometri_Task.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Vector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Geomatri_task.resx">
       <DependentUpon>Form_Geomatri_task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Trigonometri.resx">
+      <DependentUpon>Form_Trigonometri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Trigonometri_Task.resx">
+      <DependentUpon>Form_Trigonometri_Task.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Vector.resx">
       <DependentUpon>Form_Vector.cs</DependentUpon>
