@@ -38,6 +38,7 @@ namespace eksamensprojekt
             this.Visible = false;
             f.Show();
             this.Close();
+            
         }
 
         private void button_Back_Click(object sender, EventArgs e)
@@ -49,20 +50,23 @@ namespace eksamensprojekt
 
         private void button_answer_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (double.Parse(textBox_answer.Text) != rightanswer) // hvis svaret er forkert bliver knappen rød
                 {
                     textBox_answer.BackColor = Color.Red;
                     label_answer.Text = "Forkert. Prøv igen";
+                    label_answer.Visible = true;
                 }
                 else if (double.Parse(textBox_answer.Text) == rightanswer) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer.BackColor = Color.LightGreen;
                     label_answer.Text = "Dit svaret er rigtig";
+                    label_answer.Visible = true;
                 }
             }
-            catch // fanger hvis man skriver et tal.
+            catch // fanger hvis man skriver et bogstav.
             {
                 Color c = textBox_answer.BackColor;
                 textBox_answer.BackColor = Color.Red;

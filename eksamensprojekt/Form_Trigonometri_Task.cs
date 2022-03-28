@@ -23,8 +23,8 @@ namespace eksamensprojekt
             int num3 = random1.Next(0, 50);
             int num4 = random1.Next(0, 50);
 
-            rightanswer = Math.Round(num1/Math.Sin(num2));
-            rightanswer2 = Math.Round(Math.Asin(num3/num4));
+            rightanswer = Math.Round(num1 / Math.Sin(num2));
+            rightanswer2 = Math.Round(Math.Asin(num3 / num4));
             label_tal.Text = "lenght a = " + num1.ToString() + "*. angle a = " + num2.ToString() + ". c =";
             label_tal2.Text = "a = " + num3.ToString() + ". b = " + num4.ToString() + ". angle a = ";
         }
@@ -37,11 +37,13 @@ namespace eksamensprojekt
                 {
                     textBox_answer.BackColor = Color.Red;
                     label_answer.Text = "Forkert. Prøv igen";
+                    label_answer.Visible = true;
                 }
                 else if (double.Parse(textBox_answer.Text) == rightanswer) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer.BackColor = Color.LightGreen;
                     label_answer.Text = "Dit svaret er rigtig";
+                    label_answer.Visible = true;
                 }
             }
             catch (Exception)
@@ -78,11 +80,13 @@ namespace eksamensprojekt
                 {
                     textBox_answer.BackColor = Color.Red;
                     label_answer2.Text = "Forkert. Prøv igen";
+                    label_answer2.Visible = true;
                 }
                 else if (double.Parse(textBox_answer2.Text) == rightanswer2) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer.BackColor = Color.LightGreen;
                     label_answer2.Text = "Dit svaret er rigtig";
+                    label_answer2.Visible = true;
                 }
             }
             catch (Exception)
@@ -96,5 +100,5 @@ namespace eksamensprojekt
             }
         }
 
-    }
+    }  
 }
