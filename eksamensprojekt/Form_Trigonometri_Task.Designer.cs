@@ -172,7 +172,6 @@ namespace eksamensprojekt
             this.label_answer2.TabIndex = 13;
             this.label_answer2.Text = "label5";
             this.label_answer2.Visible = false;
-        
             // 
             // label4
             // 
@@ -188,7 +187,7 @@ namespace eksamensprojekt
             this.label_tal3.AutoSize = true;
             this.label_tal3.Location = new System.Drawing.Point(23, 234);
             this.label_tal3.Name = "label_tal3";
-            this.label_tal3.Size = new System.Drawing.Size(51, 20);
+            this.label_tal3.Size = new System.Drawing.Size(46, 17);
             this.label_tal3.TabIndex = 15;
             this.label_tal3.Text = "label5";
             // 
@@ -204,9 +203,9 @@ namespace eksamensprojekt
             // 
             // textBox_answer3
             // 
-            this.textBox_answer3.Location = new System.Drawing.Point(261, 227);
+            this.textBox_answer3.Location = new System.Drawing.Point(261, 229);
             this.textBox_answer3.Name = "textBox_answer3";
-            this.textBox_answer3.Size = new System.Drawing.Size(100, 26);
+            this.textBox_answer3.Size = new System.Drawing.Size(100, 22);
             this.textBox_answer3.TabIndex = 17;
             // 
             // label_answer3
@@ -214,7 +213,7 @@ namespace eksamensprojekt
             this.label_answer3.AutoSize = true;
             this.label_answer3.Location = new System.Drawing.Point(448, 230);
             this.label_answer3.Name = "label_answer3";
-            this.label_answer3.Size = new System.Drawing.Size(51, 20);
+            this.label_answer3.Size = new System.Drawing.Size(46, 17);
             this.label_answer3.TabIndex = 18;
             this.label_answer3.Text = "label6";
             // 

@@ -29,6 +29,7 @@ namespace eksamensprojekt
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button_Fin = new System.Windows.Forms.Button();
             this.button_Back = new System.Windows.Forms.Button();
             this.label_headline = new System.Windows.Forms.Label();
@@ -46,7 +47,10 @@ namespace eksamensprojekt
             this.label_tal3 = new System.Windows.Forms.Label();
             this.textBox_answer3 = new System.Windows.Forms.TextBox();
             this.button_answer3 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_answer3 = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label_Timer = new System.Windows.Forms.Label();
+            this.label_plus2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_Fin
@@ -157,9 +161,10 @@ namespace eksamensprojekt
             this.label_answer2.AutoSize = true;
             this.label_answer2.Location = new System.Drawing.Point(750, 162);
             this.label_answer2.Name = "label_answer2";
-            this.label_answer2.Size = new System.Drawing.Size(51, 20);
+            this.label_answer2.Size = new System.Drawing.Size(46, 17);
             this.label_answer2.TabIndex = 18;
             this.label_answer2.Text = "label3";
+            this.label_answer2.Visible = false;
             // 
             // textBox_answer2
             // 
@@ -182,7 +187,7 @@ namespace eksamensprojekt
             this.label_tal3.AutoSize = true;
             this.label_tal3.Location = new System.Drawing.Point(33, 229);
             this.label_tal3.Name = "label_tal3";
-            this.label_tal3.Size = new System.Drawing.Size(51, 20);
+            this.label_tal3.Size = new System.Drawing.Size(46, 17);
             this.label_tal3.TabIndex = 21;
             this.label_tal3.Text = "label4";
             // 
@@ -190,7 +195,7 @@ namespace eksamensprojekt
             // 
             this.textBox_answer3.Location = new System.Drawing.Point(563, 232);
             this.textBox_answer3.Name = "textBox_answer3";
-            this.textBox_answer3.Size = new System.Drawing.Size(100, 26);
+            this.textBox_answer3.Size = new System.Drawing.Size(100, 22);
             this.textBox_answer3.TabIndex = 23;
             // 
             // button_answer3
@@ -203,22 +208,49 @@ namespace eksamensprojekt
             this.button_answer3.UseVisualStyleBackColor = true;
             this.button_answer3.Click += new System.EventHandler(this.button_answer3_Click);
             // 
-            // label6
+            // label_answer3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(750, 235);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "label6";
-            this.label6.Visible = false;
+            this.label_answer3.AutoSize = true;
+            this.label_answer3.Location = new System.Drawing.Point(750, 235);
+            this.label_answer3.Name = "label_answer3";
+            this.label_answer3.Size = new System.Drawing.Size(46, 17);
+            this.label_answer3.TabIndex = 25;
+            this.label_answer3.Text = "label6";
+            this.label_answer3.Visible = false;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label_Timer
+            // 
+            this.label_Timer.AutoSize = true;
+            this.label_Timer.Location = new System.Drawing.Point(690, 33);
+            this.label_Timer.Name = "label_Timer";
+            this.label_Timer.Size = new System.Drawing.Size(46, 17);
+            this.label_Timer.TabIndex = 26;
+            this.label_Timer.Text = "label1";
+            // 
+            // label_plus2
+            // 
+            this.label_plus2.AutoSize = true;
+            this.label_plus2.Location = new System.Drawing.Point(26, 144);
+            this.label_plus2.Name = "label_plus2";
+            this.label_plus2.Size = new System.Drawing.Size(46, 17);
+            this.label_plus2.TabIndex = 27;
+            this.label_plus2.Text = "label6";
+            this.label_plus2.Visible = false;
             // 
             // Form_Vector_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label_plus2);
+            this.Controls.Add(this.label_Timer);
+            this.Controls.Add(this.label_answer3);
             this.Controls.Add(this.button_answer3);
             this.Controls.Add(this.textBox_answer3);
             this.Controls.Add(this.label_tal3);
@@ -262,6 +294,9 @@ namespace eksamensprojekt
         private System.Windows.Forms.Label label_tal3;
         private System.Windows.Forms.TextBox textBox_answer3;
         private System.Windows.Forms.Button button_answer3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_answer3;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label_Timer;
+        private System.Windows.Forms.Label label_plus2;
     }
 }

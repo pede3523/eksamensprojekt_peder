@@ -29,6 +29,7 @@ namespace eksamensprojekt
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button_back = new System.Windows.Forms.Button();
             this.button_finish = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@ namespace eksamensprojekt
             this.textBox_Answer2 = new System.Windows.Forms.TextBox();
             this.button_Answer2 = new System.Windows.Forms.Button();
             this.label_Answer2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label_Timer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -218,11 +221,27 @@ namespace eksamensprojekt
             this.label_Answer2.Text = "label4";
             this.label_Answer2.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label_Timer
+            // 
+            this.label_Timer.AutoSize = true;
+            this.label_Timer.Location = new System.Drawing.Point(588, 63);
+            this.label_Timer.Name = "label_Timer";
+            this.label_Timer.Size = new System.Drawing.Size(46, 17);
+            this.label_Timer.TabIndex = 22;
+            this.label_Timer.Text = "label4";
+            // 
             // Form_Geomatri_task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 360);
+            this.Controls.Add(this.label_Timer);
             this.Controls.Add(this.label_Answer2);
             this.Controls.Add(this.button_Answer2);
             this.Controls.Add(this.textBox_Answer2);
@@ -269,5 +288,7 @@ namespace eksamensprojekt
         private System.Windows.Forms.TextBox textBox_Answer2;
         private System.Windows.Forms.Button button_Answer2;
         private System.Windows.Forms.Label label_Answer2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label_Timer;
     }
 }

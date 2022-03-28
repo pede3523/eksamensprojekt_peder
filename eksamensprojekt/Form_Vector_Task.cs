@@ -12,6 +12,7 @@ namespace eksamensprojekt
 {
     public partial class Form_Vector_Task : Form
     {
+        int spørgsmål = 0;
         double rightanswer = 0.0; // erklærer en variable
         double rightanswerplus1 = 0.0;
         double rightanswerplus2 = 0.0;
@@ -37,6 +38,7 @@ namespace eksamensprojekt
             label_tal.Text = "(" + num1.ToString() + ","+ num2.ToString() + ") =";
             label_tal2.Text = "(" + num3.ToString() + "," + num4.ToString() + ") + (" + num5 + "," + num6 + ") =";
             label_tal3.Text = "Angle between (" + num7.ToString() + "," + num8.ToString() + ") and " + "(" + num9.ToString() + "," + num10.ToString() + ") =";
+            
         }
 
         private void button_Fin_Click(object sender, EventArgs e)
@@ -62,11 +64,14 @@ namespace eksamensprojekt
                 {
                     textBox_answer.BackColor = Color.Red;
                     label_answer.Text = "Forkert. Prøv igen";
+                    label_answer.Visible = true;
                 }
                 else if (double.Parse(textBox_answer.Text) == rightanswer) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer.BackColor = Color.LightGreen;
                     label_answer.Text = "Dit svaret er rigtig";
+                    label_answer.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch // fanger hvis man skriver et tal.
@@ -89,11 +94,14 @@ namespace eksamensprojekt
                 {
                     textBox_answer2.BackColor = Color.Red;
                     label_answer2.Text = "Forkert. Prøv igen";
+                    label_answer2.Visible = true;
                 }
                 else if (string.Equals(textBox_answer2.Text, rightanswerplus1.ToString() + "," + rightanswerplus2.ToString())) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer2.BackColor = Color.LightGreen;
                     label_answer2.Text = "Dit svaret er rigtig";
+                    label_answer2.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch (Exception)
@@ -111,15 +119,18 @@ namespace eksamensprojekt
         {
             try
             {
-                if (double.Parse(textBox_answer3.Text) != rightanswer) // hvis svaret er forkert bliver knappen rød
+                if (double.Parse(textBox_answer3.Text) != rightanswerplus2) // hvis svaret er forkert bliver knappen rød
                 {
                     textBox_answer3.BackColor = Color.Red;
-                    label_answer.Text = "Forkert. Prøv igen";
+                    label_answer3.Text = "Forkert. Prøv igen";
+                    label_answer3.Visible = true;
                 }
-                else if (double.Parse(textBox_answer.Text) == rightanswer) // hvis svaret er rigtig bliver knappen grøn
+                else if (double.Parse(textBox_answer.Text) == rightanswerplus2) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer3.BackColor = Color.LightGreen;
-                    label_answer.Text = "Dit svaret er rigtig";
+                    label_answer3.Text = "Dit svaret er rigtig";
+                    label_answer3.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch (Exception)
@@ -131,6 +142,20 @@ namespace eksamensprojekt
                 textBox_answer3.Text = "";
                 textBox_answer3.Focus();
             }
+        }
+        int sekunder = 0;
+        
+        
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            sekunder++;
+            label_Timer.Text = sekunder + " sekunder";
+            if (spørgsmål == 3)
+            {
+                timer.Stop();
+            }
+            
         }
     }
 }

@@ -12,6 +12,7 @@ namespace eksamensprojekt
 {
     public partial class Form_Geomatri_task : Form
     {
+        int spørgsmål = 0;
         double rightanswer = 0.0;
         double rightanswerplus1 = 0.0;
         double rightanswerplus2 = 0.0;
@@ -56,6 +57,7 @@ namespace eksamensprojekt
                     textBox_Answer.BackColor = Color.LightGreen;
                     label_Answer.Text = "Dit svaret er rigtig";
                     label_Answer.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -84,6 +86,7 @@ namespace eksamensprojekt
                     textBox_Answer1.BackColor = Color.LightGreen;
                     label_Answer1.Text = "Dit svaret er rigtig";
                     label_Answer1.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -113,6 +116,7 @@ namespace eksamensprojekt
                     textBox_Answer2.BackColor = Color.LightGreen;
                     label_Answer2.Text = "Dit svaret er rigtig";
                     label_Answer2.Visible = true;
+                    spørgsmål++;
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -126,6 +130,19 @@ namespace eksamensprojekt
 
             }
 
+        }
+
+        int sekunder = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sekunder++;
+            label_Timer.Text = sekunder + " sekunder";
+            if (spørgsmål == 3)
+            {
+                timer1.Stop();
+                MessageBox.Show("Du har klaret alle spørgsmål på" + sekunder + "sekunder");
+            }
         }
     }
 }
