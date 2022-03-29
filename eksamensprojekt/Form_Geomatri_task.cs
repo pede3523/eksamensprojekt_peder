@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace eksamensprojekt
 {
     public partial class Form_Geomatri_task : Form
     {
-        int spørgsmål = 0;
+        int spørgsmål = 0; // variabel som holder styr på hvor mange spørgsmål man har svaret rigtig på 
         double rightanswer = 0.0;
         double rightanswerplus1 = 0.0;
         double rightanswerplus2 = 0.0;
@@ -23,9 +24,9 @@ namespace eksamensprojekt
             int num1 = random1.Next(0, 50);
             int num2 = random1.Next(31,120); // er større end num3 fordi hypotinosen må være større end kateten
             int num3 = random1.Next(15, 30);
-            int num4 = random1.Next(0, 150); //areal skal være større end længder
+            int num4 = random1.Next(11, 150); //areal skal være større end længder
             int num5 = random1.Next(6, 10); // forskellige længder så vi er sikker på at det ikke bliver rektangel
-            int num6 = random1.Next(0, 5);
+            int num6 = random1.Next(1, 5);
             double mellemregning = num5 + num6;
             rightanswer = Math.Round(Math.PI * 2 * num1, 1);
             rightanswerplus1 = Math.Round(Math.Sqrt(Math.Pow(num2, 2) - Math.Pow(num3, 2)), 1);
@@ -134,14 +135,47 @@ namespace eksamensprojekt
 
         int sekunder = 0;
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) //timer der tager tid
         {
             sekunder++;
             label_Timer.Text = sekunder + " sekunder";
             if (spørgsmål == 3)
             {
                 timer1.Stop();
-                MessageBox.Show("Du har klaret alle spørgsmål på" + sekunder + "sekunder");
+                MessageBox.Show("Du har klaret alle spørgsmål på " + sekunder + " sekunder");
+
+                try
+                {
+
+                    string[] tider = File.ReadAllLines(@"c:\temp\leaderboard.txt");
+                    for (int i = 5; i < 10; i++)
+                    { 
+                        int tid = int.Parse(tider[i]);
+                        int midl = 0;
+                        if (sekunder < tid)
+                            {
+                            midl = sekunder;
+                            sekunder = tid;
+                            tid = midl;
+                            tider[i] = tid.ToString();
+                        }
+
+                    }
+                   
+
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+                    leaderboard.WriteLine(tider);
+                    leaderboard.Close();
+                }
+
+                catch
+                {
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+                    leaderboard.WriteLine("1000 1000 1000 1000 1000 " + sekunder + " 1000 1000 1000 100"); //skriver 1000 fem gange så rekorden ikke kommer under fejl kategori
+                    leaderboard.Close();
+                }
+                
+                
             }
         }
     }

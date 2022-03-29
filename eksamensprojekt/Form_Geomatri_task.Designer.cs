@@ -50,6 +50,7 @@ namespace eksamensprojekt
             this.label_Answer2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label_Timer = new System.Windows.Forms.Label();
+            this.label_Leaderboard = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -236,11 +237,21 @@ namespace eksamensprojekt
             this.label_Timer.TabIndex = 22;
             this.label_Timer.Text = "label4";
             // 
+            // label_Leaderboard
+            // 
+            this.label_Leaderboard.AutoSize = true;
+            this.label_Leaderboard.Location = new System.Drawing.Point(225, 256);
+            this.label_Leaderboard.Name = "label_Leaderboard";
+            this.label_Leaderboard.Size = new System.Drawing.Size(46, 17);
+            this.label_Leaderboard.TabIndex = 23;
+            this.label_Leaderboard.Text = "label4";
+            // 
             // Form_Geomatri_task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 360);
+            this.Controls.Add(this.label_Leaderboard);
             this.Controls.Add(this.label_Timer);
             this.Controls.Add(this.label_Answer2);
             this.Controls.Add(this.button_Answer2);
@@ -290,5 +301,6 @@ namespace eksamensprojekt
         private System.Windows.Forms.Label label_Answer2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label_Timer;
+        private System.Windows.Forms.Label label_Leaderboard;
     }
 }
