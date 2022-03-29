@@ -146,32 +146,39 @@ namespace eksamensprojekt
 
                 try
                 {
-
                     string[] tider = File.ReadAllLines(@"c:\temp\leaderboard.txt");
-                    for (int i = 5; i < 10; i++)
-                    { 
-                        int tid = int.Parse(tider[i]);
-                        int midl = 0;
-                        if (sekunder < tid)
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+                    int tid = int.Parse(tider[4]);
+                    for (int i = 0; i == 19; i++)
+                    {
+                        
+                        if (3 < i & i < 10)
+                        {
+                            
+                            int midl = 0;
+                            if (sekunder < tid)
                             {
-                            midl = sekunder;
-                            sekunder = tid;
-                            tid = midl;
-                            tider[i] = tid.ToString();
+                                midl = sekunder;
+                                sekunder = tid;
+                                tid = midl;
+                                tider[i] = tid.ToString();
+
+                            }
                         }
+                    tider[i] = tider[i].ToString();
+                    leaderboard.Write(tider[i]);
+                    
 
                     }
-                   
-
-                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
-                    leaderboard.WriteLine(tider);
                     leaderboard.Close();
+
+
                 }
 
                 catch
                 {
                     StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
-                    leaderboard.WriteLine("1000 1000 1000 1000 1000 " + sekunder + " 1000 1000 1000 100"); //skriver 1000 fem gange så rekorden ikke kommer under fejl kategori
+                    leaderboard.WriteLine("1000 1000 1000 1000 1000 " + sekunder + " 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 "); //skriver 1000 fem gange så rekorden ikke kommer under fejl kategori
                     leaderboard.Close();
                 }
                 
