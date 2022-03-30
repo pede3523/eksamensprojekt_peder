@@ -68,7 +68,7 @@ namespace eksamensprojekt
 
         private void button_finish_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            Leaderboard f = new Leaderboard();
             f.Show();
             this.Close();
 
