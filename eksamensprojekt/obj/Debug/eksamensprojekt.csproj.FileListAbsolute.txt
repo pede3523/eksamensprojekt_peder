@@ -30,3 +30,4 @@ C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamenspr
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Geomatri_task.resources
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Trigonometri.resources
 C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Trigonometri_Task.resources
+C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Leaderboard.resources

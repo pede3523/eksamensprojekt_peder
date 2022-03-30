@@ -21,17 +21,16 @@ namespace eksamensprojekt
         {
             InitializeComponent();
             Random random1 = new Random();
-            int num1 = random1.Next(0, 50);
-            int num2 = random1.Next(31,120); // er større end num3 fordi hypotinosen må være større end kateten
+            int num1 = random1.Next(1, 50);
+            int num2 = random1.Next(31, 150); // er større end num3 fordi hypotinosen må være større end kateten
             int num3 = random1.Next(15, 30);
-            int num4 = random1.Next(11, 150); //areal skal være større end længder
-            int num5 = random1.Next(6, 10); // forskellige længder så vi er sikker på at det ikke bliver rektangel
-            int num6 = random1.Next(1, 5);
+            int num4 = random1.Next(10, 50); //areal skal være større end længder
+            int num5 = random1.Next(1, 5); // forskellige længder så vi er sikker på at det ikke bliver rektangel
+            int num6 = random1.Next(6, 10);
             double mellemregning = num5 + num6;
             rightanswer = Math.Round(Math.PI * 2 * num1, 1);
             rightanswerplus1 = Math.Round(Math.Sqrt(Math.Pow(num2, 2) - Math.Pow(num3, 2)), 1);
-            rightanswerplus2 = Math.Round(2.0 * (num4 /mellemregning), 1); /*2.0 fordi vis ikke kommer en error der sikker at Math.Round er ambiguous
-            between Math.Round(double,int) og Math.Round(decimal,int) */
+            rightanswerplus2 = Math.Round(2 *(num4 /mellemregning), 1);
             label_TASK.Text = "Du har en cirkel med radius " + num1.ToString() + " hvad er omkredsen?";
             label_Task1.Text = "Du har en hypotinose på " + num2.ToString() + " og en katete på " + num3.ToString(); ;
             label_Task2.Text = "Find højden på et trapez med areal " + num4.ToString() + " og længder på " + num5.ToString() + " og " + num6.ToString(); ; 
@@ -40,7 +39,9 @@ namespace eksamensprojekt
 
         private void button_finish_Click(object sender, EventArgs e)
         {
-
+            Leaderboard fv = new Leaderboard();
+            fv.Show();
+            this.Close();
         }
 
         private void button_answer_Click(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace eksamensprojekt
                     label_Answer.Text = "Dit svaret er rigtig";
                     label_Answer.Visible = true;
                     spørgsmål++;
+                    button_answer.Visible = false; //så man ikke kan svare rigtigt på samme spørgsmål 3 gange så timeren stopper
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -88,6 +90,7 @@ namespace eksamensprojekt
                     label_Answer1.Text = "Dit svaret er rigtig";
                     label_Answer1.Visible = true;
                     spørgsmål++;
+                    button_Answer1.Visible = false;
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -118,6 +121,7 @@ namespace eksamensprojekt
                     label_Answer2.Text = "Dit svaret er rigtig";
                     label_Answer2.Visible = true;
                     spørgsmål++;
+                    button_Answer2.Visible = false;
                 }
             }
             catch // fanger hvis man skriver et bogstav.
@@ -148,14 +152,14 @@ namespace eksamensprojekt
                 {
                     string[] tider = File.ReadAllLines(@"c:\temp\leaderboard.txt");
                     StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
-                    int tid = int.Parse(tider[4]);
-                    for (int i = 0; i == 19; i++)
+                    
+                    for (int i = 0; i <= 19; i++)
                     {
-                        
-                        if (3 < i & i < 10)
+                        int tid = int.Parse(tider[i]);
+                        if (4 < i & i < 10)
                         {
                             
-                            int midl = 0;
+                            int midl;
                             if (sekunder < tid)
                             {
                                 midl = sekunder;
@@ -165,8 +169,8 @@ namespace eksamensprojekt
 
                             }
                         }
-                    tider[i] = tider[i].ToString();
-                    leaderboard.Write(tider[i]);
+                        tider[i] = tider[i].ToString();
+                        leaderboard.WriteLine(tider[i]);
                     
 
                     }
@@ -178,7 +182,7 @@ namespace eksamensprojekt
                 catch
                 {
                     StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
-                    leaderboard.WriteLine("1000 1000 1000 1000 1000 " + sekunder + " 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 "); //skriver 1000 fem gange så rekorden ikke kommer under fejl kategori
+                    leaderboard.WriteLine("1000\n 1000\n 1000\n 1000\n 1000\n " + sekunder + " \n1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n "); //skriver 1000 fem gange så rekorden ikke kommer under fejl kategori
                     leaderboard.Close();
                 }
                 
