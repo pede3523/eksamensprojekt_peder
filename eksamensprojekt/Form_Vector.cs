@@ -12,14 +12,21 @@ namespace eksamensprojekt
 {
     public partial class Form_Vector : Form
     {
+        Form f;
         public Form_Vector()
         {
             InitializeComponent();
+         
+        }
+        public Form_Vector(Form f)
+        {
+            InitializeComponent();
+            this.f = f;
         }
 
         private void button_Continue_Click(object sender, EventArgs e)
         {
-            Form_Vector_Task fvt = new Form_Vector_Task();
+            Form_Vector_Task fvt = new Form_Vector_Task(f);
             this.Visible = false;
             fvt.Show();
             this.Close();

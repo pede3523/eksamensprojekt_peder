@@ -12,14 +12,17 @@ namespace eksamensprojekt
 {
     public partial class Form_Vector_Task : Form
     {
+        Form f;
+
         int spørgsmål = 0;
         double rightanswer = 0.0; // erklærer en variable
         double rightanswerplus1 = 0.0;
         double rightanswerplus2 = 0.0;
         double rightanswerangle = 0.0;
-        public Form_Vector_Task()
+        public Form_Vector_Task(Form f)
         {
             InitializeComponent();
+            this.f = f;
             Random random1 = new Random();
             int num1 = random1.Next(0, 50);
             int num2 = random1.Next(0, 50);
@@ -43,9 +46,9 @@ namespace eksamensprojekt
 
         private void button_Fin_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+           // Form1 f = new Form1();
             this.Visible = false;
-            f.Show();
+            f.Visible = true;
             this.Close();
         }
 
@@ -158,4 +161,5 @@ namespace eksamensprojekt
             
         }
     }
+
 }

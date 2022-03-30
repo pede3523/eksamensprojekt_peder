@@ -19,7 +19,7 @@ namespace eksamensprojekt
 
         private void button_Vec_Click(object sender, EventArgs e) //når man trykker på knappen åbner et nyt vindue 
         {
-            Form_Vector fv = new Form_Vector(); //kalder nyt vindue frem 
+            Form_Vector fv = new Form_Vector(this); //kalder nyt vindue frem 
             this.Visible = false;
             fv.Show(); //viser vindue 
             
@@ -43,6 +43,13 @@ namespace eksamensprojekt
             Form_Trigonometri ft = new Form_Trigonometri();
             this.Visible = false;
             ft.Show();
+        }
+
+        private void button_Pro_Click(object sender, EventArgs e)
+        {
+            Form_Procent fp = new Form_Procent();
+            this.Visible = false;
+            fp.Show();
         }
     }
 }
