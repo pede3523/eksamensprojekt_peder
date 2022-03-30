@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,7 @@ namespace eksamensprojekt
                     label_answer.Text = "Dit svaret er rigtig";
                     label_answer.Visible = true;
                     spørgsmål++;
+                    button_answer.Visible = false;
                 }
             }
             catch // fanger hvis man skriver et tal.
@@ -102,6 +104,7 @@ namespace eksamensprojekt
                     label_answer2.Text = "Dit svaret er rigtig";
                     label_answer2.Visible = true;
                     spørgsmål++;
+                    button_answer2.Visible = false;
                 }
             }
             catch (Exception)
@@ -131,6 +134,7 @@ namespace eksamensprojekt
                     label_answer3.Text = "Dit svaret er rigtig";
                     label_answer3.Visible = true;
                     spørgsmål++;
+                    button_answer3.Visible = false;
                 }
             }
             catch (Exception)
@@ -153,9 +157,46 @@ namespace eksamensprojekt
             label_Timer.Text = sekunder + " sekunder";
             if (spørgsmål == 3)
             {
+
                 timer.Stop();
+                try
+                {
+                    string[] tider = File.ReadAllLines(@"c:\temp\leaderboard.txt");
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+
+                    for (int i = 0; i <= 19; i++)
+                    {
+                        int tid = int.Parse(tider[i]);
+                        if (0 <= i & i < 5)
+                        {
+
+                            int midl;
+                            if (sekunder < tid)
+                            {
+                                midl = sekunder;
+                                sekunder = tid;
+                                tid = midl;
+                                tider[i] = tid.ToString();
+
+                            }
+                        }
+                        tider[i] = tider[i].ToString();
+                        leaderboard.WriteLine(tider[i]);
+
+
+                    }
+                    leaderboard.Close();
+
+
+                }
+
+                catch
+                {
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+                    leaderboard.WriteLine(sekunder + "\n1000\n 1000\n 1000\n 1000\n 1000\n1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n ");
+                    leaderboard.Close();
+                }
             }
-            
         }
     }
 }
