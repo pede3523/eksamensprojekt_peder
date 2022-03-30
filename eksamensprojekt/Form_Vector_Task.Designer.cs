@@ -185,7 +185,7 @@ namespace eksamensprojekt
             // label_tal3
             // 
             this.label_tal3.AutoSize = true;
-            this.label_tal3.Location = new System.Drawing.Point(33, 229);
+            this.label_tal3.Location = new System.Drawing.Point(26, 194);
             this.label_tal3.Name = "label_tal3";
             this.label_tal3.Size = new System.Drawing.Size(46, 17);
             this.label_tal3.TabIndex = 21;
@@ -229,9 +229,9 @@ namespace eksamensprojekt
             this.label_Timer.AutoSize = true;
             this.label_Timer.Location = new System.Drawing.Point(690, 33);
             this.label_Timer.Name = "label_Timer";
-            this.label_Timer.Size = new System.Drawing.Size(46, 17);
+            this.label_Timer.Size = new System.Drawing.Size(79, 17);
             this.label_Timer.TabIndex = 26;
-            this.label_Timer.Text = "label1";
+            this.label_Timer.Text = "0 sekunder";
             // 
             // label_plus2
             // 

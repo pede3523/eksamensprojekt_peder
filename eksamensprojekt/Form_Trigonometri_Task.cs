@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace eksamensprojekt
 {
     public partial class Form_Trigonometri_Task : Form
     {
+        int spørgsmål = 0;
         double rightanswer = 0.0;
         double rightanswer2 = 0.0;
         double rightanswer3 = 0.0;
@@ -22,7 +24,7 @@ namespace eksamensprojekt
             int num1 = random1.Next(0, 50);
             int num2 = random1.Next(0, 89);
             int num3 = random1.Next(0, 50);
-            int num4 = random1.Next(0, 50);
+            int num4 = random1.Next(1, 50);
             int num5 = random1.Next(0, 50);
             int num6 = random1.Next(0, 89);
 
@@ -49,6 +51,8 @@ namespace eksamensprojekt
                     textBox_answer.BackColor = Color.LightGreen;
                     label_answer.Text = "Dit svaret er rigtig";
                     label_answer.Visible = true;
+                    spørgsmål++;
+                    button_answer.Visible = false;
                 }
             }
             catch (Exception)
@@ -92,6 +96,8 @@ namespace eksamensprojekt
                     textBox_answer2.BackColor = Color.LightGreen;
                     label_answer2.Text = "Dit svaret er rigtig";
                     label_answer2.Visible = true;
+                    spørgsmål++;
+                    button_answer2.Visible = false;
                 }
             }
             catch (Exception)
@@ -113,11 +119,15 @@ namespace eksamensprojekt
                 {
                     textBox_answer3.BackColor = Color.Red;
                     label_answer3.Text = "Forkert. Prøv igen";
+                    label_answer3.Visible = true;
                 }
                 else if (double.Parse(textBox_answer3.Text) == rightanswer2) // hvis svaret er rigtig bliver knappen grøn
                 {
                     textBox_answer3.BackColor = Color.LightGreen;
                     label_answer3.Text = "Dit svaret er rigtig";
+                    label_answer3.Visible = true;
+                    spørgsmål++;
+                    button_answer3.Visible = false;
                 }
             }
             catch (Exception)
@@ -128,6 +138,55 @@ namespace eksamensprojekt
                 textBox_answer3.BackColor = c;
                 textBox_answer3.Text = "";
                 textBox_answer3.Focus();
+            }
+        }
+        int sekunder = 0;
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sekunder++;
+            label_Timer.Text = sekunder + " sekunder ";
+            if (spørgsmål == 3)
+            {
+
+                timer1.Stop();
+                try
+                {
+                    string[] tider = File.ReadAllLines(@"c:\temp\leaderboard.txt");
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+
+                    for (int i = 0; i <= 19; i++)
+                    {
+                        int tid = int.Parse(tider[i]);
+                        if (14 < i & i < 19)
+                        {
+
+                            int midl;
+                            if (sekunder < tid)
+                            {
+                                midl = sekunder;
+                                sekunder = tid;
+                                tid = midl;
+                                tider[i] = tid.ToString();
+
+                            }
+                        }
+                        tider[i] = tider[i].ToString();
+                        leaderboard.WriteLine(tider[i]);
+
+
+                    }
+                    leaderboard.Close();
+
+
+                }
+
+                catch
+                {
+                    StreamWriter leaderboard = new StreamWriter(@"c:\temp\leaderboard.txt");
+                    leaderboard.WriteLine(sekunder + "\n1000\n 1000\n 1000\n 1000\n 1000\n1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n 1000\n ");
+                    leaderboard.Close();
+                }
             }
         }
     }
