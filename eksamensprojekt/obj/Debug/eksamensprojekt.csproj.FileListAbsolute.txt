@@ -34,3 +34,5 @@ C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamenspr
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Procent.resources
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Procent_task.resources
 C:\Users\gusta\OneDrive\Dokumenter\GitHub\eksamensprojekt_peder\eksamensprojekt\obj\Debug\eksamensprojekt.Leaderboard.resources
+C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Procent.resources
+C:\Users\peder\source\repos\eksamensprojekt\eksamensprojekt\obj\Debug\eksamensprojekt.Form_Procent_task.resources

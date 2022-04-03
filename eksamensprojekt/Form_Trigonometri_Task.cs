@@ -17,12 +17,6 @@ namespace eksamensprojekt
         double rightanswer = 0.0;
         double rightanswer2 = 0.0;
         double rightanswer3 = 0.0;
-        Form f;
-        public Form_Trigonometri_Task(Form f)
-        {
-            InitializeComponent();
-            this.f = f;
-        }
         public Form_Trigonometri_Task()
         {
             InitializeComponent();
@@ -74,8 +68,8 @@ namespace eksamensprojekt
 
         private void button_finish_Click(object sender, EventArgs e)
         {
-            //Form1 f = new Form1();
-            f.Visible = true;
+            Leaderboard f = new Leaderboard();
+            f.Show();
             this.Close();
 
         }
