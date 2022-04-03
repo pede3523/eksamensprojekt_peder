@@ -14,9 +14,11 @@ namespace eksamensprojekt
     {
         double rightanswer = 0.0;
         double rightanswer2 = 0.0;
-        public Form_Procent_task()
+        Form f;
+        public Form_Procent_task(Form f)
         {
             InitializeComponent();
+            this.f = f;
             Random random1 = new Random();
             double num1 = random1.Next(0, 100);
             double num2 = random1.Next(0, 100);
@@ -25,11 +27,11 @@ namespace eksamensprojekt
             double num5 = random1.Next(0, 100);
             rightanswer = Math.Round((num1 / 100) * num2, 1);
             rightanswer2 = Math.Round(((num3 / 100) * num4) + ((num5 / 100) * num4));
-            label_tal.Text = "what is " + num2.ToString() + "% of " + num1.ToString();
+            label_tal.Text = "what is " + num2.ToString() + "% of " + num1.ToString() + " = ";
             label_tal2.Text = "how does " + num3 + " and " + num5 + " with a discount of" + num4 + " = ";
         }
 
-        private void button_answer_Click(object sender, EventArgs e)
+            private void button_answer_Click(object sender, EventArgs e)
         {
             try
             {
@@ -94,8 +96,8 @@ namespace eksamensprojekt
 
         private void button_finish_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
+            f.Visible = true;
+            this.Visible = false;
             this.Close();
         }
     }

@@ -17,6 +17,13 @@ namespace eksamensprojekt
         double rightanswer = 0.0;
         double rightanswerplus1 = 0.0;
         double rightanswerplus2 = 0.0;
+        Form f;
+
+        public Form_Geomatri_task(Form f)
+        {
+            InitializeComponent();
+            this.f = f;
+        }
         public Form_Geomatri_task()
         {
             InitializeComponent();
@@ -39,8 +46,9 @@ namespace eksamensprojekt
 
         private void button_finish_Click(object sender, EventArgs e)
         {
-            Leaderboard fv = new Leaderboard();
-            fv.Show();
+            //Leaderboard fv = new Leaderboard();
+            //fv.Show();
+            f.Visible = true;
             this.Close();
         }
 

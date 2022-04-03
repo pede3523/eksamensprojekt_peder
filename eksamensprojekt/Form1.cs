@@ -33,21 +33,21 @@ namespace eksamensprojekt
 
         private void button_Geo_Click(object sender, EventArgs e)
         {
-            Form_Geomatri fg = new Form_Geomatri();
+            Form_Geomatri fg = new Form_Geomatri(this);
             this.Visible = false;
             fg.Show();
         }
 
         private void button_Tri_Click(object sender, EventArgs e)
         {
-            Form_Trigonometri ft = new Form_Trigonometri();
+            Form_Trigonometri ft = new Form_Trigonometri(this);
             this.Visible = false;
             ft.Show();
         }
 
         private void button_Pro_Click(object sender, EventArgs e)
         {
-            Form_Procent fp = new Form_Procent();
+            Form_Procent fp = new Form_Procent(this);
             this.Visible = false;
             fp.Show();
         }
